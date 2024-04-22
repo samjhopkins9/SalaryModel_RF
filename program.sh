@@ -41,8 +41,10 @@ Rnotebook=$(cat <<EOF
           color: #ddd !important;
         }
 </style>
-
-<h1>Predicting Salary using Random Forest Regression</h1>
+---
+title: "Modeling Salary"
+output: html_document
+---
 <p id="names">Sam Hopkins</p>
 
 <h3>Initialize Workspace and Read Data</h3>
