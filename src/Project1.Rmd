@@ -1,12 +1,12 @@
 <style>
         @font-face {
             font-family: 'Bebas Neue';
-            src: url('../Fonts/BebasNeue-Regular.ttf') format('truetype');
+            src: url('../data/Fonts/BebasNeue-Regular.ttf') format('truetype');
         }
 
         @font-face {
             font-family: "Arsenal";
-            src: url('../Fonts/Arsenal-Regular.ttf') format('truetype');
+            src: url('../data/Fonts/Arsenal-Regular.ttf') format('truetype');
         }
 
         h1 {

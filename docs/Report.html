@@ -6,12 +6,12 @@
   
     @font-face {
         font-family: 'Bebas Neue';
-        src: url('../Fonts/BebasNeue-Regular.ttf') format('truetype');
+        src: url('../data/Fonts/BebasNeue-Regular.ttf') format('truetype');
     }
     
     @font-face {
         font-family: "Arsenal";
-        src: url('../Fonts/Arsenal-Regular.ttf') format('truetype');
+        src: url('../data/Fonts/Arsenal-Regular.ttf') format('truetype');
     }
   
     html {
@@ -106,16 +106,16 @@
         <h3><a href="https://www.kaggle.com/datasets/mohithsairamreddy/salary-data/code" target="_BLANK">Dataset</a></h3>
                 <p>The dataset for this project is from Kaggle. It was compiled from a collection of publicly available sources, including surveys and job posting sites. It contains the salary, education level, age, number of years of experience, gender, and job title of 6704 individuals, and was last updated 1 year ago.</p>
                 <div id="plots">
-                <img src="../plots/corMap.png" width="30%"></img>
-                <img src="../plots/histAll.png" width="30%"></img>
-                <img src="../plots/histMen.png" width="30%"> </img>
-                <img src="../plots/histWomen.png" width="30%"> </img>
-                <img src="../plots/histHS.png" width="30%"> </img>
-                <img src="../plots/histBach.png" width="30%"> </img>
-                <img src="../plots/histMast.png" width="30%"> </img>
-                <img src="../plots/histPHD.png" width="30%"> </img>
-                <img src="../plots/scatterAge.png" width="30%"> </img>
-                <img src="../plots/scatterYrs.png" width="30%"> </img>
+                <img src="../data/plots/corMap.png" width="30%"></img>
+                <img src="../data/plots/histAll.png" width="30%"></img>
+                <img src="../data/plots/histMen.png" width="30%"> </img>
+                <img src="../data/plots/histWomen.png" width="30%"> </img>
+                <img src="../data/plots/histHS.png" width="30%"> </img>
+                <img src="../data/plots/histBach.png" width="30%"> </img>
+                <img src="../data/plots/histMast.png" width="30%"> </img>
+                <img src="../data/plots/histPHD.png" width="30%"> </img>
+                <img src="../data/plots/scatterAge.png" width="30%"> </img>
+                <img src="../data/plots/scatterYrs.png" width="30%"> </img>
                 </div>
                 
                 <p>The dataset contains eight values for education level: phD, PhD, Bachelor's, Bachelor's Degree, Master's, Master's Degree, High school, and blank/none. 10 na values were removed using na.omit(). A value 1-4 was assigned to the education level of each individual in the dataset, using the same number for redundant values of Bachelors, PhD and Masters. Since there was only one value below high school for education level (empty string, not NA), it was put in the same category as high school (high school/none). A value 0 or 1 was assigned to gender, and as.factor() was used on these new numerical columns to ensure they functioned properly within the context of regression.</p>
@@ -130,34 +130,34 @@
     <h2>Results</h2>
         <p>The best model shows an R<sup>2</sup> of 0.91, which is very good. The RSE is around 15000, which is very good for a dataset in which the IQR is around 45000, three times that. </p>
         <h3>Comparison Table</h3>
-        <img src="../plots/compTable.png" width="35%"> </img>
+        <img src="../data/plots/compTable.png" width="35%"> </img>
         
         <h3>Predicted vs Observed: Cross-Validated Random Forest Model</h3>
-        <img src="../plots/finalModel.png" width="30%"> </img>
+        <img src="../data/plots/finalModel.png" width="30%"> </img>
         
         <h3>Random Forest (best)</h3>
-        <img src="../plots/modelPlot.png" width="30%"> </img>
+        <img src="../data/plots/modelPlot.png" width="30%"> </img>
         <p>The error is lower with more randomly selected predictors. Even though there are only four predictors in the formula, this chart goes up to six, likely because the RF algorithm is using an auto-generated interaction term or something else from the dataset that was not specified.</p>
         <h4>Cross-Validated</h4>
-        <img src="../plots/modelPlot1.png" width="30%"> </img>
+        <img src="../data/plots/modelPlot1.png" width="30%"> </img>
         <h4>Original</h4>
-        <img src="../plots/modelPlot2.png" width="30%"> </img>
+        <img src="../data/plots/modelPlot2.png" width="30%"> </img>
         <p>The error decreases as the number of trees increases in both cases; the decrease is slightly shaper in the cross-validated model.</p>
         
         <h3>General Linear Model</h3>
         <h4>Cross-validated</h4>
-        <img src="../plots/linModel.png" width="30%"> </img>
+        <img src="../data/plots/linModel.png" width="30%"> </img>
         <h4>One trial</h4>
         <img src="../plots/linModel1.png" width="30%"> </img>
         <p>All predictors are significant.</p>
         <p>The cross-validated model is the same as the one found on one trial; cross-validation does not seem to help the general linear model in this case.</p>
         
         <h3>Ridge Regression</h3>
-        <img src="../plots/rrModel.png" width="30%"> </img>
+        <img src="../data/plots/rrModel.png" width="30%"> </img>
         <p>The error increases as lambda increases.</p>
 
         <h3>Decision Tree</h3>
-        <img src="../plots/dtModel.png" width="30%"> </img>
+        <img src="../data/plots/dtModel.png" width="30%"> </img>
         <p>The error increases as the complexity increases.</p>
         
         <h3>Observations about Models</h3>
