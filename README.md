@@ -11,7 +11,8 @@
     ### README.md: this file -- overview of the project.
     ### docs:
         - Presentation.pdf: slideshow presentation of the project.
-        - Report.html: written project report. Similar content to presentation, but more detailed and verbose.
+        - Report.html: written project report. Similar content to presentation, but more detailed and verbose. Includes citations.
+        - Report.pdf: pdf version of report.html.
     
     ### run.sh: runs project, renders into index.html and opens in browser.
     ### data:
